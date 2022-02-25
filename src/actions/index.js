@@ -1,12 +1,6 @@
-export const increment = (nr) => {
+export const addSong = (song) => {
     return {
-        type: 'INCREMENT',
-        payload: nr
-    };
-};
-
-export const decrement = () => {
-    return {
-        type: 'DECREMENT'
+        type: 'ADDSONG',
+        payload: song
     };
 };

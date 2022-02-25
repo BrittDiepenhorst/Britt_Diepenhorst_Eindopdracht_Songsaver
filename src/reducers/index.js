@@ -1,8 +1,8 @@
-import counterReducer from './counter';
+import songReducer from './songReducer';
 import { combineReducers } from 'redux';
 
 const allReducers = combineReducers({
-    counter: counterReducer,
+    addSong: songReducer,
 });
 
 export default allReducers;
