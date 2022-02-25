@@ -15,6 +15,7 @@ function SongForm() {
 
     const handleChange = (e) => {
         console.log('hello')
+        console.log(songToAdd)
         setSongToAdd((prev) => ({
             ...prev,
             [e.target.name]: (e.target.value),
@@ -32,13 +33,18 @@ function SongForm() {
             <input type="text" name="songTitle" placeholder="Title" value={songToAdd.songTitle} onChange={handleChange} />
             <input type="text" name="artistName" placeholder="Artist Name" value={songToAdd.artistName} onChange={handleChange} />
             <select name="genre" placeholder="Genre" value={songToAdd.genre} onChange={handleChange}>
-                <option vale="no-value">Select Genre</option>
+                <option value="no-value">Select Genre</option>
                 <option value="Pop">Pop</option>
                 <option value="Rock">Rock</option>
                 <option value="Jazz">Jazz</option>
             </select>
-            <input type="text" name="rating" placeholder="Rating" value={songToAdd.rating} onChange={handleChange} />
-
+            <select type="text" name="rating" placeholder="Rating" value={songToAdd.rating} onChange={handleChange}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
             <button onClick={() => handleClick}>Submit</button>
 
             <h1>Songs: {songs}</h1>
