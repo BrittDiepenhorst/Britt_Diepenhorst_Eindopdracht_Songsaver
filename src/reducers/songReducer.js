@@ -1,12 +1,14 @@
 const initialState = {
-    songs: [],
+    songs: []
 };
 
 const songReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADDSONG':
-            console.log(state)
-            return { ...state, song: action.payload };
+            return {
+                ...state,
+                songs: [...state.songs, action.payload]
+            };
         default:
             return state;
     }
