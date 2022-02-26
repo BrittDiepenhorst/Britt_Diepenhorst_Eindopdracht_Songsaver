@@ -10,6 +10,6 @@ function SongOverview() {
             <SongList />
         </div>
     );
-}
+};
 
 export default SongOverview;
