@@ -18,12 +18,22 @@ code {
   text-align: center;
 }
 
+.Songform button {
+  all: none;
+  background-color: #ffffff;
+  border: solid grey;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 20px;
+}
+
 .App h1 {
   text-align: center;
 }
 
 .SongList {
   width: 100%;
+  text-align: center;
 }
 
 .song-header {
@@ -34,6 +44,6 @@ code {
   background-color: lightgray;
 }
 
-.SongList tr:hover {
-  background-color: gray;
+.SongList, tr, td {
+  border-spacing: 0px;
 }

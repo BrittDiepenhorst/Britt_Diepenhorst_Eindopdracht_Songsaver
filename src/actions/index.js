@@ -1,7 +1,13 @@
-let nextSongID = 0;
 export const addSong = (song) => {
     return {
         type: 'ADDSONG',
-        payload: song, id: ++nextSongID,
+        payload: song,
+    };
+};
+
+export const deleteSong = (id) => {
+    return {
+        type: 'DELETESONG',
+        payload: id,
     };
 };

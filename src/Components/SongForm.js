@@ -13,12 +13,17 @@ function SongForm() {
         rating: 0,
     });
 
+    const generateUniqueID = () => {
+        return Math.random();
+    };
+
     const handleChange = (e) => {
         console.log('hello')
         console.log(songToAdd)
         setSongToAdd((prev) => ({
             ...prev,
             [e.target.name]: (e.target.value),
+            id: generateUniqueID(),
         }))
     };
 
@@ -38,7 +43,7 @@ function SongForm() {
                 <option value="Jazz">Jazz</option>
             </select>
             <select type="text" name="rating" placeholder="Rating" value={songToAdd.rating} onChange={handleChange}>
-                <option value="0"></option>
+                <option value="0">Rating</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
