@@ -18,8 +18,6 @@ function SongForm() {
     };
 
     const handleChange = (e) => {
-        console.log('hello')
-        console.log(songToAdd)
         setSongToAdd((prev) => ({
             ...prev,
             [e.target.name]: (e.target.value),

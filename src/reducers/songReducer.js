@@ -3,7 +3,6 @@ const initialState = {
 };
 
 const songReducer = (state = initialState, action) => {
-    console.log(action.payload)
     switch (action.type) {
         case 'ADDSONG':
             return {

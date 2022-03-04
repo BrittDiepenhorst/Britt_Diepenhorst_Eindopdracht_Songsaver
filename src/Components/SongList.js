@@ -16,7 +16,6 @@ function SongList() {
             <td>{song.rating}</td>
             <td><button onClick={(e) => {
                 console.log(`Deleting ${song.id}`);
-                console.log(song.id);
                 dispatch(deleteSong(song.id));
             }}>Delete Song</button></td>
         </tr>
