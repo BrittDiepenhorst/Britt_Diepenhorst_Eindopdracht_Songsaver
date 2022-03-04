@@ -5,14 +5,8 @@ import { deleteSong } from '../actions/index'
 function SongList() {
 
     const songs = useSelector((state) => state.songs.songs);
-    const id = useSelector((state) => state.songs.songs.id);
 
     const dispatch = useDispatch();
-
-    const handleClick = (event) => {
-        event.preventDefault();
-        dispatch(deleteSong(id));
-    };
 
     const songRow = songs.map(song => (
         <tr key={song.id}>
@@ -20,7 +14,11 @@ function SongList() {
             <td>{song.artistName}</td>
             <td>{song.genre}</td>
             <td>{song.rating}</td>
-            <td><button onClick={handleClick}>Delete Song</button></td>
+            <td><button onClick={(e) => {
+                console.log(`Deleting ${song.id}`);
+                console.log(song.id);
+                dispatch(deleteSong(song.id));
+            }}>Delete Song</button></td>
         </tr>
     ));
 

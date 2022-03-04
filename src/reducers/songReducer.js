@@ -13,7 +13,7 @@ const songReducer = (state = initialState, action) => {
         case 'DELETESONG':
             return {
                 ...state,
-                songs: state.songs.filter(song => song.id !== action.payload.id)
+                songs: state.songs.filter(song => song.id !== action.payload)
             };
         default:
             return state;
