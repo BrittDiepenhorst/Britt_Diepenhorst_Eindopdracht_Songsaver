@@ -16,7 +16,7 @@ function SongList() {
     ));
 
     return (
-        <table className="Songtable">
+        <table className="SongList">
             <thead>
                 <tr className="song-header">
                     <th className="song-row__item">Song</th>

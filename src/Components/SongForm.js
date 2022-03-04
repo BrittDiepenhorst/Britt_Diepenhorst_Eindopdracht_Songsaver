@@ -28,7 +28,7 @@ function SongForm() {
     };
 
     return (
-        <div>
+        <div className="Songform">
             <input type="text" name="songTitle" placeholder="Title" value={songToAdd.songTitle} onChange={handleChange} />
             <input type="text" name="artistName" placeholder="Artist Name" value={songToAdd.artistName} onChange={handleChange} />
             <select name="genre" placeholder="Genre" value={songToAdd.genre} onChange={handleChange}>
